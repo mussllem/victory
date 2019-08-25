@@ -1,0 +1,36 @@
+<div class="content-wrapper"  background-repeat: no-repeat; background-size: 800px 700px;">
+        <section class="content">
+<div class="box box-primary">
+ <section class="content-header">
+			<h1>
+            Input <?php echo $this->uri->segment(2);?>
+			</h1>
+        </section>
+                <div class="box-header">
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                <form role="form" enctype="multipart/form-data" action="<?php echo base_url();?>save/faq" method="post">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label>Question</label>
+                      <input type="text" name="question" class="form-control" id="exampleInputEmail1" placeholder="Question">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Answer</label>
+                      <textarea name="answer"  class="ckeditor" rows="5" id="ckeditor" placeholder="Answer"></textarea>
+                      <script>
+                          $(function () {
+                              CKEDITOR.replace('ckeditor');
+                          });
+                      </script>
+                    </div>
+                  </div><!-- /.box-body -->
+
+                  <div class="box-footer" align="right">
+                    <button type="submit" name="save_news" class="btn btn-primary">Simpan</button>
+					<button type="reset" class="btn btn-danger">Batal</button>
+                  </div>
+                </form>
+              </div><!-- /.box -->
+              </section></div>
